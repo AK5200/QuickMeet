@@ -7,8 +7,7 @@ const cors = require("cors");
 
 const io = new Server(process.env.SERVER_PORT, {
   cors: {
-    origin: '*', // Allow requests from all origins
-    methods: ['GET', 'POST'], // Specify allowed methods
+    origin: '*', // Allow requests from all origins // Specify allowed methods
   },
 });
 
