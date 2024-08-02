@@ -2,7 +2,10 @@ require("dotenv").config();
 const { Server } = require("socket.io");
 
 const io = new Server(process.env.SERVER_PORT, {
-  cors: true,
+  cors: {
+    origin: '*', // Allow requests from all origins
+    methods: ['GET', 'POST'], // Specify allowed methods
+  },
 });
 
 const nameToSocketIdMap = new Map();
