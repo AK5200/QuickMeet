@@ -14,7 +14,7 @@ export const useSocket = () => {
 export const SocketProvider = (props)=>{
                                      // server port
     const socket = useMemo (() => io('http://localhost:8000'), []);
-    // use momo for optimizing the creation of socket. useMemo stops rendring of comonent again and again without any changes.
+    // use memo for optimizing the creation of socket. useMemo stops rendring of comonent again and again without any changes.
 
     return (
         // so using create context we are creating a context. which will be present in all the components.
