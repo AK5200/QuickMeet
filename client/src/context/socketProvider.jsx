@@ -12,8 +12,9 @@ export const useSocket = () => {
 }
 
 export const SocketProvider = (props)=>{
+
                                      // server port
-    const socket = useMemo (() => io('http://localhost:8000'), []);
+    const socket = useMemo (() => io(process.env.REACT_APP_SERVER_URL), []);
     // use memo for optimizing the creation of socket. useMemo stops rendring of comonent again and again without any changes.
 
     return (
